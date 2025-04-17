@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Bai02 from "../component/Bai02_Todo.jsx";      // TodoList component
-// import Bai03 from "../component/Bai03_Toggle_Theme.jsx";
+import Bai03 from "../component/Bai03_Toggle_Theme.jsx";
 import Bai01 from "../component/Bai01/Bai01.jsx"  // ToggleTheme component
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
       {/* Hiển thị component tương ứng */}
       {selected === 'counter' && <Bai01/>}
       {selected === 'todo' && <Bai02/>}
-      {selected === 'theme' && <Bai02/>}
+      {selected === 'theme' && <Bai03/>}
     </>
   );
 }
