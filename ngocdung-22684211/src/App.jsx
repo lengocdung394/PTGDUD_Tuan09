@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// import Bai02 from "../baitap/TodoList";      // TodoList component
-// import Bai03 from "../baitap/Toggle_Theme";
+import Bai02 from "../component/Bai02_Todo.jsx";      // TodoList component
+// import Bai03 from "../component/Bai03_Toggle_Theme.jsx";
 import Bai01 from "../component/Bai01/Bai01.jsx"  // ToggleTheme component
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <div style={{ textAlign: "center", marginTop: "20px" , border:"2px solid black" ,width:"500px", margin :"auto", borderRadius:"5px"}}>
+      <div style={{ textAlign: "center", marginTop: "20px", border: "2px solid black", width: "500px", margin: "auto", borderRadius: "5px" }}>
         <button
           style={{ ...baseStyle, ...(selected === 'counter' ? activeStyle : {}) }}
           onClick={() => setSelected('counter')}
@@ -49,9 +49,9 @@ function App() {
       </div>
 
       {/* Hiển thị component tương ứng */}
-      {selected === 'counter' && <Bai01 />}
-      {selected === 'todo' && <Bai01 />}
-      {selected === 'theme' && <Bai01 />}
+      {selected === 'counter' && <Bai01/>}
+      {selected === 'todo' && <Bai02/>}
+      {selected === 'theme' && <Bai02/>}
     </>
   );
 }
