@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from 'react';
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom/client';  // Import từ react-dom/client
+import './index.css';
+import { Provider } from 'react-redux'; // Import Provider từ react-redux
+import App from './App';
+import store from '../component/Bai01/Store'; // Import store
 
-createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'));  // Tạo root container
+root.render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <Provider store={store}>  {/* Bọc toàn bộ ứng dụng trong Provider */}
+      <App />
+    </Provider>
+  </StrictMode>
+);
