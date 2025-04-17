@@ -72,7 +72,7 @@ export default function Shoppingcart() {
   }
 
   return (
-    <div className="grid md:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-10 shadow-lg rounded-lg p-6">
       <div className="md:col-span-2">
         <div>
           <div className="p-6">
